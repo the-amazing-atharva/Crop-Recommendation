@@ -1,17 +1,7 @@
 # Crop Prediction App Using Machine Learning
 
-This project is a Streamlit web application that predicts the suitable crop to grow based on soil and environmental conditions. The prediction is powered by a trained machine learning model created in this project, using a dataset from Kaggle. The app takes various input parameters such as nitrogen, phosphorus, potassium, temperature, humidity, pH level, and rainfall, and predicts the best crop to grow under the given conditions.
+This EDAI project is a Streamlit web application that predicts the suitable crop to grow based on soil and environmental conditions. The prediction is powered by a trained machine learning model created in this project, using a dataset from Kaggle. The app takes various input parameters such as nitrogen, phosphorus, potassium, temperature, humidity, pH level, and rainfall, and predicts the best crop to grow under the given conditions.
 
-## Table of Contents
-
-- [Overview](#overview)
-- [Features](#features)
-- [Dataset](#dataset)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Model and Scaler](#model-and-scaler)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Overview
 
@@ -62,21 +52,7 @@ The dataset was explored using correlation matrices and heatmaps to understand t
 - **y** (label) was the crop (label) column.
 - The dataset was split into training and testing sets with a ratio of 80/20.
 - Features were scaled using a `MinMaxScaler`.
-
-The following models were evaluated:
-
-| Model                      | Accuracy   |
-| -------------------------- | ---------- |
-| LogisticRegression         | 91.82%     |
-| SVC                        | 96.82%     |
-| KNeighborsClassifier       | 96.82%     |
-| DecisionTreeClassifier     | 98.86%     |
-| ExtraTreeClassifier        | 93.41%     |
-| **RandomForestClassifier** | **99.32%** |
-| BaggingClassifier          | 98.64%     |
-| GradientBoostingClassifier | 98.18%     |
-
-The **RandomForestClassifier** was selected for deployment due to its high accuracy of 99.32%. The model and the `MinMaxScaler` were saved as `model.pkl` and `minmaxscaler.pkl`.
+- The **RandomForestClassifier** was selected for deployment due to its high accuracy of 99.32%. The model and the `MinMaxScaler` were saved as `model.pkl` and `minmaxscaler.pkl`.
 
 ## Installation
 
@@ -104,14 +80,6 @@ The **RandomForestClassifier** was selected for deployment due to its high accur
    ```bash
    streamlit run app.py
    ```
-
-## Usage
-
-1. **Once the app is running**, open your browser and navigate to the address provided by Streamlit (usually [http://localhost:8501/](http://localhost:8501/)).
-
-2. **Input the required parameters** for soil nutrients and environmental conditions.
-
-3. **Click the "Predict Crop" button** to get the predicted crop.
 
 ## Model and Scaler
 
@@ -148,20 +116,3 @@ The model predicts a number between 1-22, corresponding to the following crop li
 ## Contributing
 
 Feel free to fork the repository and submit pull requests if you would like to contribute. Any enhancements, bug fixes, or suggestions are welcome!
-
-### How to Contribute
-
-1. Fork the project
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a pull request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-### Notes:
-
-- Update the `git clone` URL to your actual repository.
-- Replace any placeholder links for downloading files (`model.pkl`, `minmaxscaler.pkl`, etc.).
